@@ -1,0 +1,24 @@
+<!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">
+  Display Details
+</button> -->
+<button class="btn btn-primary" (click)="onToggleDisplay()">
+  Display Details
+</button>
+<p *ngIf="showSecret">Secret Password = tuna</p>
+<!-- เรียกใช้ value ใน array ตรงๆ -->
+<!-- <div
+  *ngFor="let logItem of log"
+  [ngClass]="{ logs: logItem >= 5 }"
+  [ngStyle]="{ backgroundColor: logItem >= 5 ? 'blue' : 'transparent' }"
+>
+  {{ logItem }}
+</div> -->
+
+<!-- เรียกใช้ index -->
+<div
+  *ngFor="let logItem of log; let i = index"
+  [ngClass]="{ logs: i >= 4 }"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+>
+  {{ i }}
+</div>

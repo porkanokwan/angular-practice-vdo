@@ -1,0 +1,14 @@
+<label>Username: </label>
+<input type="text" class="form-control" [(ngModel)]="inputDetail" />
+<button type="button" [disabled]="inputDetail === ''" (click)="onCilckSubmit()">
+  submit
+</button>
+<p>{{ username }}</p>
+
+<!-- เฉลย -->
+<label>Username: </label>
+<input type="text" class="form-control" [(ngModel)]="username" />
+<p>{{ username }}</p>
+<button type="button" [disabled]="username === ''" (click)="username = ''">
+  Reset username
+</button>
